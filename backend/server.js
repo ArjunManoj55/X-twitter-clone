@@ -11,6 +11,9 @@ dotenv.config()
 // console.log(process.env.MONGO_URI); DOSENT REQUIRE HERE
 const PORT = process.env.PORT
 
+//middleware
+app.use(express.json());
+
 //routes
 app.use("/api/auth",authRoutes);
 
@@ -20,3 +23,8 @@ app.listen(PORT, ()=> {
     connectMongoDB();
 });
 
+//ON-PROGRESS
+
+//signup auth controller
+//jwt
+//need to be tested with postman
